@@ -34,8 +34,8 @@ class Blog:
 
 class Index:
     def GET(self):
-        name = "Rocket"
-        return render.hello(name="Rocket")
+        name = "SteveRocket"
+        return render.hello(name=name)
 
 
 class Upper:
