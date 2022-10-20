@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<strong>request:{{ request }}</strong>
+<p>INFO:{{ info }}</p>
+
+<hr>
+反转
+{% for l in language|reverse %}
+<p>{{ l }}</p>
+{% endfor %}
+
+<hr>
+排序
+<ol>
+    {% for n in numbers|sort %}
+    <li><strong>{{ n }}</strong></li>
+    {% endfor %}
+</ol>
+
+</body>
+</html>
