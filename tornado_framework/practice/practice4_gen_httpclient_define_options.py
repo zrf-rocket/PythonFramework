@@ -35,6 +35,9 @@ scheduler_ws.start()
 
 
 def main():
+    options.parse_command_line()
+    #命令行输入： python *.py --showname=zhouruifu
+    print(options.showname) # zhouruifu
     http_server = httpserver.HTTPServer(Application())
     http_server.listen(options.port, address=options.address)
     main_loop.start()
