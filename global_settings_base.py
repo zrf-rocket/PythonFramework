@@ -4,6 +4,7 @@ import os
 url = "https://gitee.com/SteveRocket/python_framework.git"
 author = "zhouruifu"
 name_en = "SteveRocket"
+email = "rocket_2014@126.com"
 
 ##### 数据库相关配置
 # redis配置
