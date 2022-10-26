@@ -11,5 +11,49 @@
 <p>over_time：{{over_time}}</p>
 <p>SETTINGS：{{SETTINGS}}</p>
 <p>WEBSOCKET_URL：{{WEBSOCKET_URL}}</p>
+
+<div class="container">
+    <div class="form-group">
+        <label>消息</label>
+        <textarea class="form-control" rows="3" id="message"></textarea>
+    </div>
+    <button type="button" class="btn btn-primary" id="send">发送</button>
+    <div id="result"></div>
+</div>
 </body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+    if ("WebSocket" in window) {
+        var host = "{{WEBSOCKET_URL}}";
+        // alert(host);
+        var websocket = new WebSocket(host);
+        websocket.onopen = function (evt) {
+            console.log("websocket opender......")
+        };
+        websocket.onmessage = function (evt) {
+            var data = evt.data;
+            console.log(data);
+
+            // $('#count').html($.parseJSON(data)['inventoryCount']);
+        };
+        websocket.onclose = function () {
+            console.log("websocket closeing....")
+        }
+
+        websocket.onerror = function (evt) {
+
+        };
+
+        $("#send").on("click", function () {
+            var message = $("#message").val();
+            console.log(message);
+            if (message !== "") {
+                websocket.send(message);
+            }
+        });
+    } else {
+        console.log("browser not support websocket");
+    }
+
+</script>
 </html>

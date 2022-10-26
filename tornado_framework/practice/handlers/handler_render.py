@@ -8,7 +8,10 @@ def get_login_url(request):
 
 
 def get_websocket_url(request):
-    return 'ws://%s/tornado/socket.io/' % request.host
+    # url = 'ws://%s/tornado/socket.io/' % request.host
+    url = 'ws://%s/ws' % request.host
+    return url
+
 
 
 class IndexHandler(web.RequestHandler):

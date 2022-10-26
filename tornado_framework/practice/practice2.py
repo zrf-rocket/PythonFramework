@@ -1,3 +1,4 @@
+# tornado实例化加载路由和配置
 import settings
 import logging
 import tornado.httpserver as httpserver
@@ -13,6 +14,7 @@ print(settings.BASE_DIR)
 
 class Application(web.Application):
     def __init__(self):
+        # 加载路由、加载配置
         web.Application.__init__(self, handlers=handlers, **settings.settings)
 
 
