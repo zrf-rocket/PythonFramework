@@ -1,15 +1,14 @@
 <<<<<<< HEAD
 
 # Python Django Framework
+
 1. Python3 Django Web框架（Web framework）。
-2. 本环境采用基于Python3.11-django4.1.3。  
+2. 本环境采用基于Python3.11-django4.1.3。
 3. Django是一个由Python写成的Web应用框架。Django的主要目的是简便、快速的开发数据库驱动的网站。它强调代码复用，多个组件可以很方便的以“插件”形式服务于整个框架，Django有许多功能强大的第三方插件，甚至可以很方便的开发出自己的工具包。
 
 ## Django 4.0新特性
 
 [官网介绍](https://docs.djangoproject.com/en/dev/releases/4.0/)
-
-
 
 ## 安装教程
 
@@ -32,8 +31,8 @@ DjangoMakoTemplates使用mako模板引擎开发
 
 ## Django Middleware
 
-1. django的核心在于中间件middleware，django所有的请求、返回都由中间件来完成。  
-2. 中间件就是处理HTTP的request和response的，类似插件，比如有Request中间件、view中间件、response中间件、exception中间件等。  
+1. django的核心在于中间件middleware，django所有的请求、返回都由中间件来完成。
+2. 中间件就是处理HTTP的request和response的，类似插件，比如有Request中间件、view中间件、response中间件、exception中间件等。
 3. Middleware都需要在项目“settings.py”中的MIDDLEWARE_CLASSES进行定义。
 
 <div style="text-align: center; margin: 0 auto;"><img src="./../images/django_request_process.png" style="width: 500px;" title="Django请求处理流程"/></div>
@@ -82,8 +81,6 @@ https://bk.tencent.com/docs/document/7.0/170/13914
 
 ## Django常用命令
 
-
-
 ## 应用案例
 
 #### 使用Django提供RESTful API服务
@@ -99,7 +96,6 @@ https://bk.tencent.com/docs/document/7.0/170/13914
 2. 使用mako templates
    [蓝鲸开发框架工程模板]()
    [查看项目案例](https://gitee.com/SteveRocket/bk_demo.git) 包含Python基础实战、奖项申报、文件备份功能。
-
 
 ## 技术性参考文档
 
