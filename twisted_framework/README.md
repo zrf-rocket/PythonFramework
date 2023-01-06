@@ -1,10 +1,12 @@
+<<<<<<< HEAD
+
 # Python_Twisted_Framework
 
 ### 介绍
 
 Twisted是基于单线程的事件驱动的网络引擎。Twisted是一个事件驱动的 Python 网络编程框架。它是最成熟的非阻塞 I/O 库之一，可供公众使用。 Twisted有两种工作模式：reactor和application方式。reactor是twisted事件循环的核心，提供了一些服务的基本接口，像网络通信、线程和事件的分发。反应器具体的内容包括：定时任务、线程、建立网络连接、监听连接。
 
-###  
+###   
 
 ### 异步模型与同步模型的区别
 
@@ -36,3 +38,19 @@ Python3 Twisted Web框架（Web framework）。
 
 pip install twisted==22.8.0
 
+# Twisted
+
+Twisted是一个基于Reactor模式的异步IO网络框架。基于Reactor模式抽象出了异步编程模型以及各种非阻塞的io模块（tcp、http、ftp等），使我们很方便地进行异步编程。
+
+## 什么是Reactor模式
+
+Reactor模式就是利用循环体来等待事件发生，然后处理发生的事件的模式。 Reactor主要有如下两个功能：
+
+* 监视一系列与你I/O操作相关的文件描述符（description)。监视文件描述符的过程是异步的，也就是说整个循环体是非阻塞的；
+* 不停地向你汇报那些准备好的I/O操作的文件描述符。
+
+[Github](https://github.com/twisted/twisted)
+[参考文档](https://docs.twisted.org/en/stable/core/howto/index.html)
+
+https://zhuanlan.zhihu.com/p/84036822
+> > > > > > > origin/master
