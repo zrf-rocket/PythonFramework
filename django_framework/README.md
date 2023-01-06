@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Python Django Framework
 
 1. Python3 Django Web框架（Web framework）。
@@ -9,12 +7,6 @@
 ## Django 4.0新特性
 
 [官网介绍](https://docs.djangoproject.com/en/dev/releases/4.0/)
-
-## 安装教程
-
-创建Django项目 创建APP 迁移 makemigrations migreat
-
-Django中间件开发
 
 ## 目录结构
 
@@ -80,6 +72,11 @@ https://bk.tencent.com/docs/document/7.0/170/13914
 ## Django Gunicorn
 
 ## Django常用命令
+
+> startapp mako_frame  
+> showmigrations [app_label]  
+> makemigrations [appname]  
+> migrate [appname]
 
 ## 应用案例
 

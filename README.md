@@ -55,7 +55,7 @@ https://zhuanlan.zhihu.com/p/102716258
 
 ## 语言框架优缺点
 
-1. Aiohttp
+1. [Aiohttp](https://docs.aiohttp.org/en/stable/)
 
 * 优点：用于 asyncio 和 Python 的异步 HTTP 客户端 / 服务器。支持客户端和 HTTP 服务器，支持开箱即用的服务器 WebSockets 和客户端 WebSockets，没有回调地狱。Web 服务器具有中间件、信号和可插入路由。
 * 缺点：根据 RFC 7231 aiohttp 2.0 版本后做了接受 HEAD 请求的调整，使用之前版本并且用 add_ get () 添加的请求，如果使用 HEAD 方法访问会返回 405。如果处理器会写入很多响应体内容，你可以在执行 HEAD 方法时跳过处理响应体内容以提高执行效率。
@@ -70,7 +70,9 @@ https://zhuanlan.zhihu.com/p/102716258
 * 优点：Cyclone是Python的Web服务器框架，它将 Tornado API 实现为 Twisted 协议。Twisted 是一个事件驱动的 Python 网络编程框架。它是最成熟的非阻塞 I/O 库之一，可供公众使用。Tornado 是 FriendFeed 网络服务器的开源版本，它是最流行和最快速的 Python 网络服务器之一，具有用于构建网络应用程序的非常不错的API。除了丰富的功能集之外，Cyclone还解决了C10K问题。
 * 缺点：Cyclone不再支持 python 2.x。
 
-4. [Django](https://github.com/django/django.git)
+4. [Django](https://docs.djangoproject.com/zh-hans/3.0/)
+
+   [GitHub地址：](https://github.com/django/django.git) https://github.com/django/django.git
 
 * 优点：是一个高层次 Python Web 开发框架，特点是开发快速、代码较少、可扩展性强。Django 采用 MTV（Model、Template、View）模型组织资源，框架功能丰富，模板扩展选择最多。对于专业人员来说，Django 是当之无愧的 Python 排名第一的 Web 开发框架。Django各种内置的功能模块比较完备。大而全，属于重量级框架，集成了很多组件，例如: Models、Admin、Form。
 * 缺点：包括一些轻量级应用不需要的功能模块，不如 Flask 轻便。过度封装很多类和方法，直接使用比较简单，但改动起来比较困难。相比于 C,C++ 性能，Djang 性能偏低。模板实现了代码和样式完全分离，不允许模板里出现 Python 代码，灵活度不够。另外学习曲线也相对陡峭。
@@ -87,6 +89,8 @@ https://zhuanlan.zhihu.com/p/102716258
 
 7. [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
+   [Flask用户指南](http://docs.jinkan.org/docs/flask/)
+
 * 优点：Flask 是一个 Python Web 开发的微框架，比较灵活，严格来说，它仅提供 Web 服务器支持，不提供全栈开发支持，原生组件几乎非常少。然而，Flask 非常轻量、非常简单，基于它搭建 Web 系统都以分钟来计时，特别适合小微原型系统的开发。花少时间、产生可用系统，是非常划算的选择。Flask的路由以及路由函数由修饰器设定，开发人员不需要借助其他文件匹配。
 * 缺点：对于大型网站开发，需要设计路由映射的规则，否则导致代码混乱。对新手来说，容易使用低质量的代码创建 “不良的 web 应用程序”。
 
@@ -101,6 +105,8 @@ https://zhuanlan.zhihu.com/p/102716258
 * 缺点：就功能方面 Sanic 模仿 Flask，比如通过共享 Blueprints 的概念，微小的子应用程序，允许开发人员在更大的应用程序中拆分和组织其代码。对于光光是数据增删改查CRUD应用，Sanic 也不是一个好的选择。
 
 10. [Tornado](https://www.tornadoweb.org/en/stable/)
+
+    [Tornado用户指南](https://tornado-zh.readthedocs.io/zh/latest/)
 
 * 优点：Tornado 是一个基于异步网络功能库的Web开发框架，因此，它能支持几万个开放连接，Web服务高效稳定。可见，Tornado适合高并发场景下的Web系统，开发过程需要采用Tornado提供的框架，灵活性较差，确定场景后再考虑使用不迟。原生异步非阻塞，在IO密集型应用和多任务处理上占据绝对性的优势，属于专注型框架。相比Django是较为原始的框架，诸多内容需要自己去处理。少而精，属于轻量级框架。支持websockets长连接。内嵌了HTTP服务器。单线程的异步网络程序，默认启动时根据CPU数量运行多个实例；利用CPU多核的优势。
 * 缺点：Tornado 5.0 改进了与 Python 的本机异步功能的集成。因此不再支持 Python 3.3，并且 Python 3.5 用户必须使用 Python 3.5.2 或更高版本。Tornado 6.0 将需要 Python 3.5 及更高版本，并将完全放弃 Python 2 支持。
@@ -246,15 +252,32 @@ https://zhuanlan.zhihu.com/p/102716258
 * 优点：Buildbot 是 python 实现的开源持续构建和持续交付工具，为 Python, Mozilla, Chromium, WebKit 等知名项目使用。Buildbot 可以直接使用 python 包，轻松拥有上万库，具备强大的扩展能力。如果你觉得 Jenkins 已经轻松地满足你的需求，你不需要 Buildbot。如果你在使用 Jenkins 时觉得效率低下、扩展困难、一些用 python 等脚本可以实现的动作在 Jenkins 困难重重，那么可以看看 Buildbot。
 * 缺点：buildbot 对多项目支持并不好。
 
+### 爬虫框架
 
+39. [Scrapy](https://scrapy-chs.readthedocs.io/zh_CN/0.24/intro/tutorial.html)
 
+    python为了爬取网站数据，提取结构性数据而编写的应用框架。
+
+40. [PySpider](http://docs.pyspider.org/en/latest/Quickstart/
+
+    python实现的功能强大的网络爬虫系统，能在浏览器界面上进行脚本的编写。
+
+41. [Crawley](http://project.crawley-cloud.com/)
+
+    python高效爬虫框架，支持关系和非关系数据库，数据可以导出为JSON、XML等。
+
+42. [Portia](http://tingyun.site/2017/06/29/Portia-%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%88%AC%E8%99%AB%E5%B7%A5%E5%85%B7/)
+
+    python开源可视化爬虫工具。
 
 ### 定时任务框架
-39. celery
-    
-40. airflow
-    
-41. apscheduler
+
+43. celery
+
+44. airflow
+
+45. apscheduler
 
 ### 其他框架
-42. pyscript
+
+46. pyscript
