@@ -68,3 +68,13 @@ Web Server Gateway Interface（Web服务器网关接口，WSGI）已被用作Pyt
 12. Webpy
 * 优点：web.py 是一个采用 Python 作为开发语言的 Web 框架，简单且强大。俄罗斯排名第一的 Yandex 搜索引擎基于这个框架开发，Guido van Rossum 认为这是最好的 Python Web 框架。
 * 缺点：Web.py 并未像其他框架一样保持与 Python 3 兼容性的最新状态。这不仅意味着缺乏对异步语法的支持，还意味着缺少对已弃用的函数的错误。此外，目前尚不清楚维护者是否有计划在 Python 2 到达其支持生命周期结束后保持 Web.py 的最新状态。
+
+### 定时任务框架
+13. celery
+    
+14. airflow
+    
+15. apscheduler
+
+### 其他框架
+16. pyscript
