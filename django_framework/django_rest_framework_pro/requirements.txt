@@ -1,0 +1,13 @@
+django==2.1.5
+django-extensions
+django-filter
+django-redis
+django-rest-framework-mongoengine
+djangorestframework
+
+djangorestframework-simplejwt==5.2.2
+pyjwt==2.6.0
+
+
+
+
