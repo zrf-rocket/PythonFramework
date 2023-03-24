@@ -294,3 +294,7 @@ Control.ca-bundle
 Control.system-ca-bundle
 
 GitHub.sublime-settings
+
+tests/
+static/
+code_test/
