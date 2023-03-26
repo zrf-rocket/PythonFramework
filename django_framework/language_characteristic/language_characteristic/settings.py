@@ -358,15 +358,18 @@ DJANGO_REDIS_LOGGER = 'some.specified.logger'
 # CACHES = {
 #     'default': {
 #         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#         'TIMEOUT': 300, # 缓存超时时间（默认300秒，None表示永不过期，0表示立即过期）
 #         'LOCATION': [
 #             '192.168.1.89:11211',
 #             '192.168.1.90:11211',
 #         ],
+#         'MAX_ENTRIES': 3,  # 当前最大缓存数
 #         # 也可以给缓存机器加权重，权重高的承担更多的请求，如下
 #         # 'LOCATION': [
 #         #     ('192.168.1.89:11211',5),
 #         #     ('192.168.1.90:11211',1),
 #         # ]
+#         'CULL_FREQUENCY': 3,  # 缓存到达最大个数之后，剔除缓存个数的比例，即 1/CULL_FREQUENCY（默认3）
 #     }
 #  }
 
@@ -385,8 +388,8 @@ DJANGO_REDIS_LOGGER = 'some.specified.logger'
 # CACHES = {
 #     'default': {
 #         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-#         'LOCATION': '/var/tmp/django_cache',#这个是文件夹的路径
-#         #'LOCATION': 'c:\foo\bar',#windows下的示例
+#         'LOCATION': '/var/tmp/django_cache',# Linux 这个是文件夹的路径
+#         # 'LOCATION': 'c:\tmp\bar',#windows下的示例
 #     }
 # }
 
