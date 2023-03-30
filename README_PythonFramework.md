@@ -3,7 +3,7 @@
 ## 介绍
 
 Python开发框架是一组用于简化和加速Python应用程序开发的库和工具。它们提供了一系列预定义的功能和结构，以便开发者能够快速构建、测试和维护应用程序。
-总结Python的开发框架，包括：Web框架、爬虫框架、定时任务框架、自动化测试框架、以及其他常用的框架。
+总结Python的开发框架，包括：Web框架、爬虫框架、定时任务框架、自动化测试框架、以及其他常用的框架。最新更新，请查看[本文GitHub地址](https://gitee.com/SteveRocket/python_framework/blob/master/README_PythonFramework.md)
 
 ## 什么是Web Framework？
 
