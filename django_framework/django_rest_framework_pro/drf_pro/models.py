@@ -30,7 +30,7 @@ class Article(models.Model):
     body = models.TextField(verbose_name=_('Body'), blank=True)
     # 用户(User)与文章(Article)是单对多的关系(ForeinKey)
     author = models.ForeignKey(User, verbose_name=_('Author'), on_delete=models.CASCADE, related_name='articles')
-    status = models.CharField(_('Status (*)'), max_length=1, choices=STATUS_CHOICES, default='s', null=True, blank=True)
+    status = models.CharField(verbose_name=_('Status (*)'), max_length=1, choices=STATUS_CHOICES, default='s', null=True, blank=True)
     create_date = models.DateTimeField(verbose_name=_('Create Date'), auto_now_add=True)
 
     def __str__(self):
@@ -41,3 +41,9 @@ class Article(models.Model):
         verbose_name = "Article"
         verbose_name_plural = 'Articles'
         db_table = "articles"
+
+
+
+
+class Profile(models.Model):
+    pass

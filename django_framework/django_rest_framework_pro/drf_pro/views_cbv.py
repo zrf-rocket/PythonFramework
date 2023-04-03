@@ -7,7 +7,13 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import Http404
 from .models import Article
-from .serializers import ArticleSerializer2
+from .serializers import (
+    ArticleSerializer2,
+    ArticleSerializer3,
+    ArticleSerializer4,
+    ArticleSerializer5,
+    ArticleSerializer6
+)
 
 
 class ArticleList(APIView):
@@ -106,7 +112,7 @@ class ArticleDetail2(mixins.RetrieveModelMixin, mixins.UpdateModelMixin, mixins.
 from rest_framework import generics
 class ArticleList3(generics.ListCreateAPIView):
     queryset = Article.objects.all()
-    serializer_class = ArticleSerializer2
+    serializer_class = ArticleSerializer2 # important
     # 将request.user与author绑定
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
@@ -123,8 +129,22 @@ from rest_framework import viewsets
 class ArticleViewSet(viewsets.ModelViewSet):
     # 用一个视图集替代ArticleList和ArticleDetail两个视图
     queryset = Article.objects.all()
-    serializer_class = ArticleSerializer2
+
     # 自行添加，将request.user与author绑定
+    # serializer_class = ArticleSerializer2
+
+    # 演示status和author字段转义
+    # serializer_class = ArticleSerializer3
+
+    # 演示SerializerMethodField动态添加字段
+    # serializer_class = ArticleSerializer4
+
+    # 演示嵌套序列化器
+    # serializer_class = ArticleSerializer5
+
+    # 设置关联模型的深度depth
+    serializer_class = ArticleSerializer6
+
     def perform_create(self, serializer):
         print("perform_create function")
         serializer.save(author = self.request.user)
