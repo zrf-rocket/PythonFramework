@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 新安装第三方APP
     'rest_framework',
+    # DRF自带的TokenAuthentication方案实现基本的token认证
+    'rest_framework.authtoken',
 
     'django_extensions',
 
@@ -81,13 +83,20 @@ TEMPLATES = [
 ]
 
 
-# REST framework api的任何全局设置都保存 “REST_FRAMEWORK” 的配置中
+# 设置默认的全局认证方案
+# REST framework api的任何全局设置都保存 "REST_FRAMEWORK" 的配置中
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+
+        # 'rest_framework.permissions.AllowAny',  # 默认无限制访问
+        # 'rest_framework.permissions.IsAuthenticated',
+
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
 }
 
 
@@ -106,10 +115,10 @@ DATABASES = {
     #链接mysql
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django
-    #     'NAME': 'test_SIEM',  #库名
+    #     'NAME': 'django_drf_pro',  #库名
     #     'USER': 'root',
-    #     'PASSWORD': 'fengtai',  #库密码
-    #     'HOST': '192.168.1.122',
+    #     'PASSWORD': '123456',  #库密码
+    #     'HOST': '127.0.0.1',
     #     'PORT': '3306',
     # }
 }

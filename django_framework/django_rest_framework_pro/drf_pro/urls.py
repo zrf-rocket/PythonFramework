@@ -1,6 +1,7 @@
-from django.urls import re_path
+from django.urls import re_path, path
 from rest_framework.urlpatterns import format_suffix_patterns
 from . import views, views_cbv
+from .admin import CustomAuthToken
 
 # 使用视图集后，需要使用DRF提供的路由router来分发urls，因为一个视图集现在对应多个urls的组合
 from rest_framework.routers import DefaultRouter
@@ -48,6 +49,11 @@ urlpatterns = [
     # 视图集(viewset)
     re_path(r'^articles5/$', article_list),
     re_path(r'^articles5/(?P<pk>[0-9]+)/$', article_detail),
+
+
+    # 继承ObtainAuthToken类定制视图，获取更多的信息
+    path('api-token-auth/', CustomAuthToken.as_view())
+
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns=urlpatterns)

@@ -181,17 +181,17 @@ class GameRecord(serializers.Serializer):
 
 
 
-class EventSerializer2(serializers.Serializer):
-    name = serializers.CharField()
-    room_number = serializers.IntegerField(choices=[101, 102, 103, 201])
-    date = serializers.DateField()
-
-    class Meta:
-        # Each room only has one event per day.
-        validators = serializers.UniqueTogetherValidator(
-            queryset=Article.objects.all(),
-            fields=['room_number', 'date']
-        )
+# class EventSerializer2(serializers.Serializer):
+#     name = serializers.CharField()
+#     room_number = serializers.IntegerField(choices=[101, 102, 103, 201])
+#     date = serializers.DateField()
+#
+#     class Meta:
+#         # Each room only has one event per day.
+#         validators = serializers.UniqueTogetherValidator(
+#             queryset=Article.objects.all(),
+#             fields=['room_number', 'date']
+#         )
 
 
 

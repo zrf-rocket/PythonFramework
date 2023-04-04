@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from django.urls import path, include
 from djangoapp import views as v1
 from djanoapp import views as v2
 
@@ -24,9 +24,16 @@ from . import view as v3, testdb, search
 from drf_pro import views as v4
 
 from django.urls import path, include
+from rest_framework.authtoken import views as authtoken_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # drf用户登录页面
+    path('drf-api-auth/', include('rest_framework.urls')),
+    # 暴露用户获取token的url地址
+    url(r'^api-token-auth/', authtoken_views.obtain_auth_token),
+
+
     # url(r'^admin/index',v2.index),  #http://10.11.115.62:8089/admin/index
     # url(r'^admin/index',v1.index),
 

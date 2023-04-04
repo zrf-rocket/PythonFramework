@@ -110,9 +110,12 @@ class ArticleDetail2(mixins.RetrieveModelMixin, mixins.UpdateModelMixin, mixins.
 #####
 # generic class-based views
 from rest_framework import generics
+from rest_framework import permissions
+from .permissions import IsOwnerOrReadOnly
 class ArticleList3(generics.ListCreateAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer2 # important
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     # 将request.user与author绑定
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
@@ -120,7 +123,10 @@ class ArticleList3(generics.ListCreateAPIView):
 class ArticleDetail3(generics.RetrieveUpdateAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer2
-
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+        IsOwnerOrReadOnly # 添加自定义权限
+    )
 
 
 #####
@@ -157,22 +163,3 @@ class ArticleViewSet(viewsets.ModelViewSet):
 
     def perform_authentication(self, request):
         print("perform_authentication function")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
