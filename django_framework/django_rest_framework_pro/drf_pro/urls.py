@@ -10,6 +10,16 @@ router = DefaultRouter()
 router.register(r'articles4', viewset=views_cbv.ArticleViewSet)
 
 
+# 分页
+from .views_pagination import ArticleViewSet
+router.register('articles6', viewset=ArticleViewSet)
+
+# 过滤与排序
+from .views_filter import ArticleList2, ArticleList3, ArticleList4
+# router.register('articles7', viewset=ArticleList2, basename='filter')
+# 由于ArticleList2类视图函数不是继承自视图集ViewSet，所以不支持使用router拼接
+
+
 # 针对只需要其中的几种操作 使用方法映射
 article_list = views_cbv.ArticleViewSet.as_view({
     'get': 'list',
@@ -52,7 +62,18 @@ urlpatterns = [
 
 
     # 继承ObtainAuthToken类定制视图，获取更多的信息
-    path('api-token-auth/', CustomAuthToken.as_view())
+    path('api-token-auth/', CustomAuthToken.as_view()),
+
+
+    # filter
+    path('articles7/', ArticleList2.as_view()),
+    # django-filter
+    path('articles8/', ArticleList3.as_view()),
+    # DRF SearchFilter类
+    path('articles9/', ArticleList4.as_view()),
+
+
+
 
 ]
 

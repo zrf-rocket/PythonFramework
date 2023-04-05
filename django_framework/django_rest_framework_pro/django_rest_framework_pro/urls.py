@@ -29,9 +29,9 @@ from rest_framework.authtoken import views as authtoken_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # drf用户登录页面
-    path('drf-api-auth/', include('rest_framework.urls')),
+    # path('drf-api-auth/', include('rest_framework.urls')),
     # 暴露用户获取token的url地址
-    url(r'^api-token-auth/', authtoken_views.obtain_auth_token),
+    # url(r'^api-token-auth/', authtoken_views.obtain_auth_token),
 
 
     # url(r'^admin/index',v2.index),  #http://10.11.115.62:8089/admin/index

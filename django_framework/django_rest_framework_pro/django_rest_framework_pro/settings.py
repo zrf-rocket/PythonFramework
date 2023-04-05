@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'rest_framework',
     # DRF自带的TokenAuthentication方案实现基本的token认证
     'rest_framework.authtoken',
-
+    # 过滤
+    'django_filters',
+    # django扩展
     'django_extensions',
 
 
-    # 'rest_framework_mongoengine',
+    'rest_framework_mongoengine',
     # 将自己新建的APP应用（people）添加到 settings.py中的INSTALLED_APPS中，告诉Django有这么一个应用
     'djangoapp',
     'djanoapp',
@@ -86,6 +88,37 @@ TEMPLATES = [
 # 设置默认的全局认证方案
 # REST framework api的任何全局设置都保存 "REST_FRAMEWORK" 的配置中
 REST_FRAMEWORK = {
+    # DRF中使用默认分页类
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': 2,
+
+
+    # 使用自定义的分页类
+    # 'DEFAULT_PAGINATION_CLASS': 'drf_pro.pagination.MyPageNumberPagination',
+    # 'DEFAULT_PAGINATION_CLASS': 'drf_pro.pagination.MyLimitOffsetPagination',
+
+
+    # 使用CursorPagination类
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.CursorPagination',
+    # 使用自定义CursorPagination类
+    # 并不推荐全局使用自定义的CursorPagination类，更好的方式是在GenericsAPIView或视图集viewsets中通过pagination_class属性指定
+    # 'DEFAULT_PAGINATION_CLASS': 'drf_pro.pagination.MyArticleCursorPagination',
+    # 'PAGE_SIZE': 3,
+
+
+    # DRF自带限流类
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '2/min',
+        'user': '10/min',
+        'limit_per_minute': '5/min',
+        'limit_per_hour': '500/hour'
+    },
+
+
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
@@ -94,9 +127,15 @@ REST_FRAMEWORK = {
         # 'rest_framework.permissions.AllowAny',  # 默认无限制访问
         # 'rest_framework.permissions.IsAuthenticated',
 
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
     ],
+
+
+
+
+
+
 }
 
 
