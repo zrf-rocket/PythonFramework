@@ -101,4 +101,8 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 ```
 | - django_rest_framework_pro # DRF的使用  
 | - resource_pro # Django Resource的使用
+| - django_foundation_pro Django基础的代码
+| - django_rest_framework_pro Django Restframework的代码
+| - django_advanced_pro Django进阶的代码
+| - django_senior_pro Django高级的代码
 ```
