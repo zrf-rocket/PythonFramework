@@ -1,17 +1,14 @@
 # Python Django Framework
 
-1. Python3 Django Web框架（Web framework）。
-2. 本环境采用基于Python3.11-django4.1.3。
-3. Django是一个由Python写成的Web应用框架。Django的主要目的是简便、快速的开发数据库驱动的网站。它强调代码复用，多个组件可以很方便的以“插件”形式服务于整个框架，Django有许多功能强大的第三方插件，甚至可以很方便的开发出自己的工具包。
+1. [Python Django Web框架（Web framework）](https://www.djangoproject.com/)。
+2. Django是一个由Python写成的Web应用框架。Django的主要目的是简便、快速的开发数据库驱动的网站。它强调代码复用，多个组件可以很方便的以“插件”形式服务于整个框架，Django有许多功能强大的[第三方插件](django_thirdparty_pkg.md)，甚至可以很方便的开发出自己的工具包。 
+3. Django 自身定义了服务发布、路由映射、模板编程、数据处理、后台管理系统、集成 ORM 组件的一整套功能。
+
 
 ## Django 4.0新特性
 
 [官网介绍](https://docs.djangoproject.com/en/dev/releases/4.0/)
-
-## 目录结构
-
-DjangoDefaultTemplates使用Django默认的模板引擎开发   
-DjangoMakoTemplates使用mako模板引擎开发
+或参考：https://blog.csdn.net/zhouruifu2015/article/details/129643655
 
 ## 模板引擎
 
@@ -62,8 +59,6 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 
 ## django-celery
 
-升级 django-celery 规避重连风险
-https://bk.tencent.com/docs/document/7.0/170/13914
 
 ## Django Admin
 
@@ -78,6 +73,12 @@ https://bk.tencent.com/docs/document/7.0/170/13914
 > makemigrations [appname]  
 > migrate [appname]
 
+其它详细命令使用总结请参考：
+[三十二、Django进阶：内置manage.py shell开发常用命令用法详解](https://blog.csdn.net/zhouruifu2015/article/details/129761808)
+
+[三十三、Django进阶：自定义manage.py shell管理命令以及案例（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129761804)
+
+
 ## 应用案例
 
 #### 使用Django提供RESTful API服务
@@ -87,12 +88,6 @@ https://bk.tencent.com/docs/document/7.0/170/13914
 
 #### 使用cookiecutter创建Django项目
 
-#### 基于蓝鲸开发模板开发SaaS应用
-
-1. 使用Django default templates
-2. 使用mako templates
-   [蓝鲸开发框架工程模板]()
-   [查看项目案例](https://gitee.com/SteveRocket/bk_demo.git) 包含Python基础实战、奖项申报、文件备份功能。
 
 ## 技术性参考文档
 
@@ -100,3 +95,10 @@ https://bk.tencent.com/docs/document/7.0/170/13914
 2. [Django 模板API](https://docs.djangoproject.com/zh-hans/4.1/ref/templates/api/)
 3. [Mako官方文档](https://docs.makotemplates.org/en/latest/)
 4. [参考资料](https://www.makotemplates.org/)
+
+
+## 目录结构
+```
+| - django_rest_framework_pro # DRF的使用  
+| - resource_pro # Django Resource的使用
+```
