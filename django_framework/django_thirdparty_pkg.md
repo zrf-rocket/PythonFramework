@@ -1,5 +1,7 @@
 ## 高效常用的Django第三方包
-
+```
+总结收纳日常Django项目开发中增效的第三方组件库
+```
 Django是围绕“可重用的应用，reusable app”的思想建立的。Django有一个丰富多样的由各种可以重用的应用组建起来的生态系统, 选择一些好的第三方包可以大大简化Web APP开发。
 
 1. Django-allauth - 用户注册登录管理
@@ -65,50 +67,21 @@ Django是围绕“可重用的应用，reusable app”的思想建立的。Djang
     • 广泛的第三方库生态。
     ```
     具体使用请参考《DRF实战总结》系列内容：  
-    1、DRF实战总结：DRF特点、序列化与RESTful API规范
-    https://blog.csdn.net/zhouruifu2015/article/details/129761606
-    
-    2、DRF实战总结：基于函数的视图API以及自定义序列化器（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129761750
-    
-    3、DRF实战总结：基于类的视图APIView, GenericAPIView和GenericViewSet视图集（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129761752
-    
-    4、DRF实战总结：序列化器(Serializer)、数据验证、重写序列化器方法详解（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129965351
-    
-    5、DRF实战总结：认证(Authentication)与权限(Permission)（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129965342
-    
-    6、DRF实战总结：认证及使用Token认证，代码示例详解（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129965353
-    
-    7、DRF实战总结：JWT认证原理和使用及第三方库simplejwt 的详解（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129980628
-    
-    8、DRF实战总结：分页(Pagination)及DRF提供的分页类详解（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129980604
-    
-    9、DRF实战总结：过滤(filter)与排序，以及第三方库django-filter的使用（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129980612
-    
-    10、DRF实战总结：限流(throttle)、限流的使用方式详解与代码示例（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/129980623
-    
-    11、DRF实战总结：使用cache_page和第三方库drf-extensions进行缓存（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/130023827
-    
-    12、DRF实战总结：DRF序列化模型与序列化关系模型详解（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/130023832
-    
-    13、DRF实战总结：重写DRF的to_representation和to_internal_value方法的作用详解（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/130031072
-    
-    14、DRF实战总结：获取Django请求路径的方法以及各自的区别
-    https://blog.csdn.net/zhouruifu2015/article/details/130023839
-    
-    15、DRF实战总结：2023 DRF框架序列化性能优化和cProfile性能基准测试（附源码）
-    https://blog.csdn.net/zhouruifu2015/article/details/130031818
+    * [1、DRF实战总结：DRF特点、序列化与RESTful API规范](https://blog.csdn.net/zhouruifu2015/article/details/129761606)
+    * [2、DRF实战总结：基于函数的视图API以及自定义序列化器（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129761750)
+    * [3、DRF实战总结：基于类的视图APIView, GenericAPIView和GenericViewSet视图集（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129761752)
+    * [4、DRF实战总结：序列化器(Serializer)、数据验证、重写序列化器方法详解（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129965351)
+    * [5、DRF实战总结：认证(Authentication)与权限(Permission)（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129965342)
+    * [6、DRF实战总结：认证及使用Token认证，代码示例详解（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129965353)
+    * [7、DRF实战总结：JWT认证原理和使用及第三方库simplejwt 的详解（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129980628)
+    * [8、DRF实战总结：分页(Pagination)及DRF提供的分页类详解（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129980604)
+    * [9、DRF实战总结：过滤(filter)与排序，以及第三方库django-filter的使用（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129980612)
+    * [10、DRF实战总结：限流(throttle)、限流的使用方式详解与代码示例（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129980623)
+    * [11、DRF实战总结：使用cache_page和第三方库drf-extensions进行缓存（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/130023827)
+    * [12、DRF实战总结：DRF序列化模型与序列化关系模型详解（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/130023832)
+    * [13、DRF实战总结：重写DRF的to_representation和to_internal_value方法的作用详解（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/130031072)
+    * [14、DRF实战总结：获取Django请求路径的方法以及各自的区别](https://blog.csdn.net/zhouruifu2015/article/details/130023839)
+    * [15、DRF实战总结：2023 DRF框架序列化性能优化和cProfile性能基准测试（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/130031818)
 
     
 10. Django-xadmin - 更美观更强大的后台
@@ -197,8 +170,7 @@ Django是围绕“可重用的应用，reusable app”的思想建立的。Djang
 
 21. Django Guardian
 
-    官网地址：https://django-guardian.readthedocs.io/en/stable/、https://django-guardian.readthedocs.io/en/latest/  
-    [GitHub地址](https://github.com/django-guardian/django-guardian)https://github.com/django-guardian/django-guardian    
+    官网地址：https://django-guardian.readthedocs.io/en/stable/、https://django-guardian.readthedocs.io/en/latest/ 、[GitHub地址](https://github.com/django-guardian/django-guardian)    
     Django 仅仅提供的是一种全局权限。这种简单的全局权限控制机制在很多场景下并不适用，因此需要引入另一种更细的权限机制：对象权限 (object permission)。所谓的 Object Permission 其实是一种对象颗粒度上的权限机制，它允许为每个具体对象授权 ，在 Django 中其实已经包含了 object permission 的模块，但没有具体实现，必须要使用第三方的插件完成相应的功能。django-guardian 是目前比较活跃的一个 django extension，提供了一种有效的 object permission 控制机制，与 django 原生机制一脉相承，而且能快速整合到 django-admin 中，十分推荐使用。
     具体使用参考：
     
