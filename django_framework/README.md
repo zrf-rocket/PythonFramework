@@ -57,7 +57,7 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 > Mako 是用Python编写的模板引擎。从概念上讲，mako是一种嵌入式Python（即Python Server Page）语言，模版被编译成Python代码，使用python解释器执行。mako用于外网热门网站 reddit.com ，同时也是Pylons和Pyramid Web框架默认模板语言。
 > 速度非常快，在语法和功能方面对任何熟悉Python的人都非常熟悉
 
-## django-celery
+## [Django常用第三方库(插件)总结](django_thirdparty_pkg.md)
 
 
 ## Django Admin
@@ -73,9 +73,8 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 > makemigrations [appname]  
 > migrate [appname]
 
-其它详细命令使用总结请参考：
-[三十二、Django进阶：内置manage.py shell开发常用命令用法详解](https://blog.csdn.net/zhouruifu2015/article/details/129761808)
-
+其它详细命令使用总结请参考：  
+[三十二、Django进阶：内置manage.py shell开发常用命令用法详解](https://blog.csdn.net/zhouruifu2015/article/details/129761808)  
 [三十三、Django进阶：自定义manage.py shell管理命令以及案例（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129761804)
 
 
