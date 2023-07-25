@@ -7,7 +7,7 @@ djangorestframework
 
 djangorestframework-simplejwt==5.2.2
 pyjwt==2.6.0
-
+pygments
 
 
 

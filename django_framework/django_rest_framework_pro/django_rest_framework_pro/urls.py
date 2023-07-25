@@ -13,11 +13,24 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+
+from django.conf.urls import include, url
+from rest_framework import routers
+from quickstart import views
+
+
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
-from djangoapp import views as v1
-from djanoapp import views as v2
+# from djangoapp import views as v1
+# from djanoapp import views as v2
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
+
+
+
 
 from . import view as v3, testdb, search
 
@@ -42,8 +55,8 @@ urlpatterns = [
     # url(r'^$', v1.index),
 
     # http://10.11.115.62:8089/index1
-    url(r'^index1$', v1.index),
-    url(r'^index2$', v2.index),
+    # url(r'^index1$', v1.index),
+    # url(r'^index2$', v2.index),
     url(r'^index3$', v3.index),
 
     # django操作数据库
@@ -65,4 +78,11 @@ urlpatterns = [
     url(r"^serializer_demo", v4.serializer_demo),
 
     path('v1/', include('drf_pro.urls')),
+
+    path('snippet/', include('snippets.urls')),
+] + [
+    # 使用URL路由来管理我们的API
+    # 另外添加登录相关的URL
+    url(r'', include(router.urls)),
+    url(r'^api-auth', include('rest_framework.urls', namespace='rest_framework')),
 ]

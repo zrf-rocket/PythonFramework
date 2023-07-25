@@ -1,7 +1,7 @@
 
 from django.http import HttpResponse,JsonResponse
 # HttpResponse向前台返回字符   JsonResponse
-from TestModel.models import TestAreas
+# from TestModel.models import TestAreas
 
 #此处添加数据 需要先创建对象，然后再执行 save 函数，相当于SQL中的INSERT
 #数据库操作  插入数据

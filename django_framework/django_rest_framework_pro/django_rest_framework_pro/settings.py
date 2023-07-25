@@ -39,21 +39,24 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 新安装第三方APP
     'rest_framework',
+
     # DRF自带的TokenAuthentication方案实现基本的token认证
     'rest_framework.authtoken',
     # 过滤
-    'django_filters',
+    # 'django_filters',
     # django扩展
-    'django_extensions',
+    # 'django_extensions',
 
 
-    'rest_framework_mongoengine',
+    # 'rest_framework_mongoengine',
     # 将自己新建的APP应用（people）添加到 settings.py中的INSTALLED_APPS中，告诉Django有这么一个应用
-    'djangoapp',
-    'djanoapp',
-    'people',
-    "TestModel",
+    # 'djangoapp',
+    # 'djanoapp',
+    # 'people',
+    # "TestModel",
     "drf_pro",
+    "quickstart",
+    "snippets.apps.SnippetsConfig"
 ]
 
 MIDDLEWARE = [
@@ -90,7 +93,7 @@ TEMPLATES = [
 REST_FRAMEWORK = {
     # DRF中使用默认分页类
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    # 'PAGE_SIZE': 2,
+    'PAGE_SIZE': 2,
 
 
     # 使用自定义的分页类
@@ -129,6 +132,8 @@ REST_FRAMEWORK = {
 
         # 'rest_framework.authentication.BasicAuthentication',
         # 'rest_framework.authentication.SessionAuthentication',
+
+        'rest_framework.permissions.IsAdminUser',
     ],
 
 
