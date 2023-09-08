@@ -9,7 +9,7 @@ coverage==7.3.1
 flask-caching==2.0.2
 flask-mongoengine==1.0.0
 SQLAlchemy==2.0.20
-
+WTForms
 
 
 
