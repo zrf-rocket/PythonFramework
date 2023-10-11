@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章清单</title>
+</head>
+<body>
+<table>
+    {% for latest_article in latest_articles %}
+        <tr>
+            <td>{{ latest_article.pk }}</td>
+            <td>{{ latest_article.author.username }}</td>
+            <td>{{ latest_article.title }}</td>
+            <td>{{ latest_article.pub_date }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

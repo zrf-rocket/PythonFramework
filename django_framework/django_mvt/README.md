@@ -1,11 +1,25 @@
-Django开发总结代码示例
+## Django开发总结代码示例
 
+Django Application Develop的5项基础核心技术包括模型（Model）的设计，URL的设计与配置，View（视图）的编写，Template（模板）的设计和Form(表单)的使用。
 
 ### 目录释义
 - templates 模板目录
-- mvt_design APP 演示1.Django MVT与MVC设计模式，请求过程
-- django_model APP 演示2.Model模型的介绍、字段属性、字段选项（参数）与设计
+- mvt_design                APP 演示1.Django MVT与MVC设计模式，请求过程
+- django_model              APP 演示3.Model模型的介绍、字段属性、字段选项（参数）与设计
+- django_view               APP 演示5.Django开发总结：View视图详解
+- django_templates          APP 演示6.Django开发总结：模板(Template)的设计及常用过滤器与标签介绍
+- django_forms              APP 演示7.Django开发总结：表单Forms的设计与使用
+- django_model_senior       APP 演示8.Django开发总结：模型Models高级进阶
+- django_cookie_session     APP 演示9.Django开发总结：cookie和session应用场景及使用方法总结
 
+
+- django_orm                APP 二、Django进阶：Django ORM及数据增删改查接口总结
+- django_orm_senior         APP 四、Django进阶：Django QuerySet特性和高级查询技巧
+
+- thirdlib_django_extensions    APP 七、Django进阶：第三方库Django-extensions的开发使用技巧
+- thirdlib_django_xadmin        APP Django第三方库：Xadmin界面美化
+- thirdlib_django_ckeditor      APP Django第三方库：集成django-ckeditor富文本编辑器
+- thirdlib_django_summernote    APP Django第三方库：集成django-summernote富文本编辑器
 
 
 

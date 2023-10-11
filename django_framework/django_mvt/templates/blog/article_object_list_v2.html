@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章清单 - {{ view_type }}</title>
+</head>
+<body>
+<table>
+    Now: {{ now }}
+{# object_list 为 ListView 默认的内容对象名称#}
+    {% for latest_article in object_list %}
+        <tr>
+            <td>{{ latest_article.pk }}</td>
+            <td>{{ latest_article.author.username }}</td>
+            <td>{{ latest_article.title }}</td>
+            <td>{{ latest_article.pub_date }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

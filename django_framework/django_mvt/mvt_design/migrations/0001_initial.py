@@ -4,44 +4,22 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+
     initial = True
 
-    dependencies = []
+    dependencies = [
+    ]
 
     operations = [
         migrations.CreateModel(
-            name="Task",
+            name='Task',
             fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
-                (
-                    "name",
-                    models.CharField(
-                        max_length=65, unique=True, verbose_name="Task Name"
-                    ),
-                ),
-                (
-                    "status",
-                    models.CharField(
-                        choices=[
-                            ("u", "Not started yet"),
-                            ("o", "Ongoing"),
-                            ("f", "Finished"),
-                        ],
-                        max_length=1,
-                        verbose_name="Task Status",
-                    ),
-                ),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=65, unique=True, verbose_name='Task Name')),
+                ('status', models.CharField(choices=[('u', 'Not started yet'), ('o', 'Ongoing'), ('f', 'Finished')], max_length=1, verbose_name='Task Status')),
             ],
             options={
-                "db_table": "tasks_task",
+                'db_table': 'tasks_task',
             },
         ),
     ]

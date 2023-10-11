@@ -1,0 +1,5 @@
+django-extensions
+django-ckeditor # 富文本编辑器
+django-summernote # 富文本编辑器
+
+djangorestframework
