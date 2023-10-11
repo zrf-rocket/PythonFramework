@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -25,3 +26,16 @@ class Task(models.Model):
     class Meta:
         # 自定义表名
         db_table = "tasks_task"
+
+
+class Article(models.Model):
+    """文章模型"""
+    # 通过db_column自定义数据表中字段名
+    title = models.CharField('标题', max_length=200, db_column='article_title')
+    article_slug = models.SlugField('slug', max_length=60, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        db_table = 'article'  # 通过db_table自定义数据表名

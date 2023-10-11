@@ -55,10 +55,10 @@ ROOT_URLCONF = "django_mvt.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
-        "APP_DIRS": True,
+        "DIRS": [os.path.join(BASE_DIR, "templates")],   # 指定模板文件的存放路径
+        "APP_DIRS": True,   # 搜索APP里面的所有templates目录
         "OPTIONS": {
-            "context_processors": [
+            "context_processors": [   # context_processors 用于配置模板上下文处理器，将在《74、Django进阶：Django内置全局上下文管理器(Context Processors)和使用方法（附源码）》做介绍
                 "django.template.context_processors.debug",
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
