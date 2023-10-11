@@ -3,16 +3,25 @@
 **【关于我们】**
 
 * [Articulate v1.0](https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q)
-* [Articulate v2.0 待定.......]()
+* [Articulate v2.0](https://mp.weixin.qq.com/s/V5Axn-ZWi22ubh5Jiocb9g)
 
 [![](https://img.shields.io/badge/GitHub-zrf--rocket-blue?logo=gitpod)](https://github.com/zrf-rocket)
 [![](https://img.shields.io/badge/Gitee-SteveRocket-pink)](https://gitee.com/SteveRocket/)
+[![](https://img.shields.io/badge/CSDN-zhouruifu2015-black)](https://blog.csdn.net/zhouruifu2015)
 ![CTO Plus](https://img.shields.io/badge/微信公众号：CTO%20Plus-8A2BE2) 🥰
 
-<img src="./static/wechat.png" style="width:500px">
+## Contact
 
+![微信公众号](./static/wechat.png)  
+**< 微信公众号 >**
 
-**【代码工程系列】**
+![QQ技术交流群](./static/qq_link.png)  
+**< QQ技术交流群 >**
+
+![联系作者](./static/wechat.jpg)  
+**< 联系作者 >**
+
+## **【代码工程系列】**
 
 * [Python和Go的设计模式](https://github.com/zrf-rocket/DesignPattern)
     * GitHub：https://github.com/zrf-rocket/DesignPattern
@@ -76,6 +85,10 @@
     * GitHub：https://github.com/zrf-rocket/EDR_SOC
     * Gitee：https://gitee.com/SteveRocket/edr_soc
 
+* [安全运营中心（SOC）-信息资产采集与安全评估系统（ICSA）](https://github.com/zrf-rocket/SOC_ICSA)
+    * GitHub：https://github.com/zrf-rocket/SOC_ICSA
+    * Gitee：https://gitee.com/SteveRocket/SOC_ICSA
+
 * [DevSecOps-SDLC](https://github.com/zrf-rocket/DevSecOps-SDLC)
     * GitHub：https://github.com/zrf-rocket/DevSecOps-SDLC
     * Gitee：https://gitee.com/SteveRocket/dev-sec-ops-sdlc
@@ -84,14 +97,11 @@
     * [基于AI图像识别的工业缺陷检测应用系统（GPU&FPGA）](https://mp.weixin.qq.com/s/04qefQFg-Pg1Gcqq1vBLQQ)
     * [基于AI图像识别的智能缺陷检测系统，在钢铁行业的应用-技术方案](https://mp.weixin.qq.com/s/dSHbnuOwQZzE4CvPr1JYjg)
 
-
-
 # Python Django Framework
 
 1. [Python Django Web框架（Web framework）](https://www.djangoproject.com/)。
-2. Django是一个由Python写成的Web应用框架。Django的主要目的是简便、快速的开发数据库驱动的网站。它强调代码复用，多个组件可以很方便的以“插件”形式服务于整个框架，Django有许多功能强大的[第三方插件](django_thirdparty_pkg.md)，甚至可以很方便的开发出自己的工具包。 
+2. Django是一个由Python写成的Web应用框架。Django的主要目的是简便、快速的开发数据库驱动的网站。它强调代码复用，多个组件可以很方便的以“插件”形式服务于整个框架，Django有许多功能强大的[第三方插件](django_thirdparty_pkg.md)，甚至可以很方便的开发出自己的工具包。
 3. Django 自身定义了服务发布、路由映射、模板编程、数据处理、后台管理系统、集成 ORM 组件的一整套功能。
-
 
 ## Django 4.0新特性
 
@@ -147,7 +157,6 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 
 ## [Django常用第三方库(插件)总结](django_thirdparty_pkg.md)
 
-
 ## Django Admin
 
 ## Django uWSGI Nginx
@@ -165,7 +174,6 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 [三十二、Django进阶：内置manage.py shell开发常用命令用法详解](https://blog.csdn.net/zhouruifu2015/article/details/129761808)  
 [三十三、Django进阶：自定义manage.py shell管理命令以及案例（附源码）](https://blog.csdn.net/zhouruifu2015/article/details/129761804)
 
-
 ## 应用案例
 
 #### 使用Django提供RESTful API服务
@@ -175,7 +183,6 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 
 #### 使用cookiecutter创建Django项目
 
-
 ## 技术性参考文档
 
 1. [Django 模板语法](https://docs.djangoproject.com/zh-hans/4.1/ref/templates/language/)
@@ -183,13 +190,13 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 3. [Mako官方文档](https://docs.makotemplates.org/en/latest/)
 4. [参考资料](https://www.makotemplates.org/)
 
-
 ## 目录结构
+
 ```
-| - django_rest_framework_pro # DRF的使用  
+| - django_rest_framework_pro # Django Restframework（DRF）的代码示例  
 | - resource_pro # Django Resource的使用
 | - django_foundation_pro Django基础的代码
-| - django_rest_framework_pro Django Restframework的代码
 | - django_advanced_pro Django进阶的代码
 | - django_senior_pro Django高级的代码
+| - *_actual  为项目实战案例的代码
 ```
