@@ -20,7 +20,9 @@
 
 10. Flask-Login：用于管理用户会话和用户认证的库，并提供了许多有用的功能，如重定向、请求拦截和用户管理、添加用户认证和会话支持（认证用户状态）等。
 
-11. Flask-OpenID：认证
+11. Flask-OpenID：
+
+   Flask-OpenID是一个用于在Flask应用程序中集成OpenID身份验证的库。OpenID是一种身份验证协议，允许用户使用一个OpenID身份提供者（如Google、Facebook等）来登录不同的网站。
 
 12. Flask-RESTful：用于开发RESTful API的库，并提供了许多有用的功能，如请求解析、数据验证和异常处理等。
 
@@ -35,7 +37,7 @@
     Flask-restfull 是flask开发API接口的一个框架。 Flask-RESTPlus 是Flask-restfull 升级版，可以生成swagger在线文档。这个项目不再维护，迁移到Flask-RESTX。
     Flask-RESTX 与 Flask-RESTPlus 的 API保持 100% 兼容。
 
-17. Flask-Principle：Flask扩展的框架。包含：Identity，Needs，Permission，IdentityContext。
+17. Flask-Principal：Flask扩展的框架。包含：Identity，Needs，Permission，IdentityContext。
 
 18. Flask-Security：登录和注册用户
 
