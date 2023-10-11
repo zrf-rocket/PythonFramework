@@ -55,6 +55,10 @@
     * GitHub：https://github.com/zrf-rocket/PracticeFronted
     * Gitee：https://gitee.com/SteveRocket/practice_fronted
 
+* [Python的WEB框架](https://github.com/zrf-rocket/PythonTestAutomationFramework)
+    * GitHub：https://github.com/zrf-rocket/PythonTestAutomationFramework
+    * Gitee：https://gitee.com/SteveRocket/python_test_automation_framework
+
 * [Python自动化测试框架](https://github.com/zrf-rocket/PythonTestAutomationFramework)
     * GitHub：https://github.com/zrf-rocket/PythonTestAutomationFramework
     * Gitee：https://gitee.com/SteveRocket/python_test_automation_framework
@@ -134,21 +138,38 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 
 ## DRF Django Rest framework
 
+
+参考文章：
+[开篇：深入探究Django REST Framework：构建强大的 RESTful API](https://mp.weixin.qq.com/s/pm-4_NolTjY9tZh9y5qsiQ)
+[1.DRF进阶：打造高效、可维护的RESTful API，以及它的优雅风格和规范](https://mp.weixin.qq.com/s/mMYuXC3Spe7BHSLcPfhvuw)
+[2.DRF进阶：Django REST framework指南-快速入门-DRF工程搭建](https://mp.weixin.qq.com/s/i1G1ERIwNl1ke_i6D5gbQA)
+
+
 ## Django ORM
+
+
+参考文章：
+
 
 ### Model id和pk
 
 如果一个model里没有显示声明哪一个字段（field）是主键（即在某个字段里声明primary_key=True），则django会自动生成一个名为id的AutoFields作为主键。model里的主键都有一个别名叫做pk（primary_key的缩写），无论这个主键是自动生成的还是我们指定的。使用pk和使用主键的名字是一样的效果。
 
-## Django Admin
 
 ## Django Paginator Page
 
+参考文章：
+
 ## Django Cache
+
+参考文章：
 
 ## 模板引擎
 
 #### Django默认模板引擎
+
+
+参考文章：
 
 #### mako模板引擎
 
@@ -159,9 +180,18 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 
 ## Django Admin
 
+参考文章：
+
+
 ## Django uWSGI Nginx
 
+参考文章：
+
+
 ## Django Gunicorn
+
+参考文章：
+
 
 ## Django常用命令
 
@@ -194,9 +224,10 @@ LogEntry是在后台开发中经常用到的模块，它在admin是默认开启�
 
 ```
 | - django_rest_framework_pro # Django Restframework（DRF）的代码示例  
-| - resource_pro # Django Resource的使用
-| - django_foundation_pro Django基础的代码
-| - django_advanced_pro Django进阶的代码
-| - django_senior_pro Django高级的代码
-| - *_actual  为项目实战案例的代码
+| - resource_pro # Django # Django的Resource的使用
+| - django_foundation_pro # Django基础的代码
+| - django_mvt  # 用于演示Django的MVT模式（模型、视图、模板）
+| - django_advanced_pro  # Django进阶的代码
+| - django_senior_pro # Django高级的代码
+| - *_actual  actual结尾的为项目实战案例的代码
 ```
