@@ -18,3 +18,8 @@ bin-release/
 # information for Eclipse / Flash Builder.
 
 .idea/
+
+*_tests
+test_code
+test_codes
+*.json

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <script>
+        // 变量
+        var name = ${name};
+        //json
+        var jsons = ${jsons};
+        //数组
+        var arrays = ${arrays};
+
+
+    </script>
+</head>
+<body>
+<h5>变量-获取值</h5>
+name：${name}
+framework：${framework}
+template_engine：${template_engine}
+
+
+<h5>循环遍历-字典</h5>
+
+<h5>循环遍历-数组</h5>
+<ol>
+    %for i in arrays:
+        %if i==33:
+            %continue
+        %endif
+        ${i}
+    %endfor
+</ol>
+
+        break
+    continue
+
+<h5>判断</h5>
+if
+else
+endif
+
+
+<h5>代码块</h5>
+
+
+<h5>定义函数</h5>
+
+
+<h5>继承模板</h5>
+
+
+<h5>调用文件</h5>
+
+
+<h5>引用标签</h5>
+
+
+</body>
+</html>

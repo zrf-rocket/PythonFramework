@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>author:<b>SteveRocket</b></p>
+<p>WeChat:<a href="https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q">https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q</a></p>
+
+
+{{ article }} <br/>
+文章ID：{{ article.id }} <br/>
+标题：{{ article.title }}<br/>
+作者：{{ article.author.username }}<br/>
+发布日期：{{ article.pub_date }}<br/>
+文章内容：{{ article.body }} <br/>
+
+<h2>Django过滤器</h2>
+文章ID加10：{{ article.id | add:10 }} <br/>
+大写标题：{{ article.title | upper }} <br/>
+标题长度：{{ article.title | length }} <br/>
+内容单词字数：{{ article.body | wordcount }} <br/>
+发布日期：{{ article.pub_date| date:"Y-m-j" }} <br/>
+字符串首字母大写：{{ article.author.username | capfirst }}<br/>
+如果没有属性值，则使用默认值：{{ article.desc | default:"该字段值不存在" }}<br/>
+使用连字符拼接(如果没有属性值，则为空)：{{ article.numbers }}<br/>
+使用连字符拼接：{{ numbers | join:"-" }}<br/>
+切片：{{ numbers | slice:'2:4' }}<br/>
+HTML代码：{{ html_cnts }}<br/>
+将字符串中的HTML标签转义为原始HTML代码：{{ html_cnts|safe }}<br/>
+将字符串中的HTML标签转义为原始HTML代码：{{ html_cnts2|safe }}<br/>
+<h4 style="color: red">safe</h4>
+
+</body>
+</html>

@@ -9,9 +9,26 @@ def template(request):
     return HttpResponse(html)
 
 
+userinfo = {"author": "SteveRocket", "blog": "公众号：CTO Plus", "age": 28}
+
 def template1(request):
-    userinfo = {"author": "SteveRocket", "blog": "公众号：CTO Plus", "age": 28}
+    
+    # #根据字典数据生成动态模板
     return render(request, "index.html", {"userinfo": userinfo})
+
+
+# 导入loader方法
+from django.template import loader
+def loader_template(request):
+    # 通过loader加载模板
+    temp = loader.get_template("django_templates/index_loader.html")
+    # 将temp转换成HTML字符串，以字典形式传递数据并生成html
+    html = temp.render(userinfo)
+    # 用响应对象将转换的字符串内容返回给浏览器
+    return HttpResponse(html)
+
+
+
 
 
 class SteveRocket:
