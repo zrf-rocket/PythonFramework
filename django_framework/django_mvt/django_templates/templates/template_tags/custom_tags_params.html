@@ -1,0 +1,16 @@
+{% load custom_template_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定标签参数</title>
+</head>
+<body>
+<p>author:<b>SteveRocket</b></p>
+<p>WeChat:<a href="https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q">https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q</a></p>
+
+
+<p>{{ article.title | add_params:'最热' }}</p>
+<p>{{ article.title | add_params:'最新' }}</p>
+</body>
+</html>

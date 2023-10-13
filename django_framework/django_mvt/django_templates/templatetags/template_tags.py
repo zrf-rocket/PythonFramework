@@ -18,12 +18,22 @@ def truncate_text(value, length):
     else:
         return value[:length] + '...'
 
+
 @register.filter
 def format_date(value):
     if isinstance(value, datetime.datetime):
         return f"{value.year}年{value.month}月{value.day}日"
     else:
         return f"字符串的日期：{value}"
+
+
+@register.filter
+def filter_tags(value):
+    return value.replace('公众号', '博客')
+
+@register.filter(name='prefix') # 使用name参数为自定义标签指定别名
+def sorted_filter(value):
+    return sorted(value)
 
 
 from django.templatetags import i18n, l10n, tz

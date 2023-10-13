@@ -114,6 +114,8 @@ def material_dashboard(request):
 
 
 import datetime
+
+
 def custom_template_tags(request):
     article = {'article': {
         'content': '欢迎关注微信公众号：CTO Plus',
@@ -121,3 +123,22 @@ def custom_template_tags(request):
         'pub_date_str': '2023-10-14'
     }}
     return render(request, 'template_tags/template_tags.html', article)
+
+
+def custom_template_tags_params(request):
+    return render(request, 'template_tags/custom_tags_params.html', {'article': {"title": '微信公众号：CTO Plus，自定义Django模板标签'}})
+
+
+from django.template import Template, Context
+
+
+def filter_content(request):
+    template = Template("""{% load template_tags %}
+    {{information | filter_tags}}""")
+    return HttpResponse(template.render(Context({'information': "微信公众号：CTO Plus"})))
+
+
+def sorted_tags(request):
+    template = Template("""{% load template_tags %}
+    使用自定义的标签别名{{ numbers | prefix }}""")
+    return HttpResponse(template.render(Context({"numbers": [98, 76, 54, 32, 11, 23, 45, 78, 9]})))
