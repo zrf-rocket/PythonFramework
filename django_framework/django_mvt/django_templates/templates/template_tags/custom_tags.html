@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>author:<b>SteveRocket</b></p>
+<p>WeChat:<a href="https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q">https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q</a></p>
+
+{% load custom_tags %}
+<p>{% display_data "公众号：CTO Plus" %}</p>
+<p>{% display_data 1235 %}</p>
+<p>{% display_data True %}</p>
+<p>{% display_data None %}</p>
+<p>{% display_data 123.5678 %}</p>
+</body>
+</html>

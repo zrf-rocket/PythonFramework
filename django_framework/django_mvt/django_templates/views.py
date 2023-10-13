@@ -142,3 +142,58 @@ def sorted_tags(request):
     template = Template("""{% load template_tags %}
     使用自定义的标签别名{{ numbers | prefix }}""")
     return HttpResponse(template.render(Context({"numbers": [98, 76, 54, 32, 11, 23, 45, 78, 9]})))
+
+
+def custom_simple_tags(request):
+    template = Template("""
+    {% load template_tags %}
+    {% simple_formatstr_tag '自定义简单模板标签' %}""")
+    return HttpResponse(template.render(Context()))
+
+
+def custom_include_tag1(request):
+    template = Template("""
+    {% load template_tags %}
+    {% include_tag 'SteveRocket' '微信公众号：CTO Plus' %}""")
+    return HttpResponse(template.render(Context({'author': 'cramer', 'wechat': 'CTO Plus'})))
+
+
+def custom_include_tag2(request):
+    template = Template("""
+    {% load template_tags %}
+    {% include_tag2 'https://mp.weixin.qq.com/s/0t63QjARFIcJUCnCZDDqQg' %}""")
+    return HttpResponse(template.render(Context({'author': 'SteveRocket', 'wechat': '公众号：CTO Plus'})))
+
+def show_article(request):
+    # return render(request, 'blog/index.html')
+    return render(request, 'template_tags/custom_tags.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

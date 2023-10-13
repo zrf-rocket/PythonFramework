@@ -15,12 +15,15 @@ urlpatterns = [
     path('loader_template', views.loader_template, name='loader_template'),
     path('index/<int:id>', views.index, name='django_template'),
 
-    # 自定义标签
+    # 自定义过滤器
     path('custom_template_tags', views.custom_template_tags, name='custom_template_tags'),
     path('custom_template_tags_params', views.custom_template_tags_params, name='custom_template_tags_params'),
     path('filter_content', views.filter_content, name='filter_content'),
     path('sorted_tags', views.sorted_tags, name='sorted_tags'),
 
-    # 自定义过滤器
-
+    # 自定义标签
+    path('custom_simple_tags', views.custom_simple_tags, name='custom_simple_tags'),
+    path('custom_include_tag1', views.custom_include_tag1, name='custom_include_tag1'),
+    path('custom_include_tag2', views.custom_include_tag2, name='custom_include_tag2'),
+    path('show_article', views.show_article, name='show_article'),
 ]

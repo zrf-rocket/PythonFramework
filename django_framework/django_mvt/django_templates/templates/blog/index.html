@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>author:<b>SteveRocket</b></p>
+<p>WeChat:<a href="https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q">https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q</a></p>
+
+
+{% load simple_inclusion_tags %}
+
+{% block content %}
+    <p>文章总数：{% total_article %}</p>
+    {% show_latest_articles %}
+
+    {% get_first_article as first_article %}
+    <p>第一篇文章标题</p>
+    {{ first_article.title }}
+{% endblock %}
+</body>
+</html>
