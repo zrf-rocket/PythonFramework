@@ -1,0 +1,17 @@
+{% load template_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义模板标签</title>
+</head>
+<body>
+<p>author:<b>SteveRocket</b></p>
+<p>WeChat:<a href="https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q">https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q</a></p>
+
+<!-- 文章摘要模板中使用自定义过滤器 -->
+<p>{{ article.content | truncate_text:10 }}</p>
+<p>{{ article.pub_date | format_date }}</p>
+<p>{{ article.pub_date_str | format_date }}</p>
+</body>
+</html>

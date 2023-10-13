@@ -34,7 +34,7 @@ Django Application Develop的5项基础核心技术包括模型（Model）的设
 [7、Django路由系统精讲：揭秘Django的路由系统从URL映射到视图处理的全过程（必掌握）](https://mp.weixin.qq.com/s/0t63QjARFIcJUCnCZDDqQg)
 
 [25、Django开发总结：settings.py设置选项详解](https://mp.weixin.qq.com/s/yqutHA7jDRlMpHxD5PhCQA)
-30、Django进阶：工作增效的神器-shortcuts快捷函数(shortcut function)模块详解
+[30、Django进阶：工作增效的神器-shortcuts快捷函数(shortcut function)模块详解](https://mp.weixin.qq.com/s/v444oG-PsKcqPerIG2JGpw)
 [41、Django开发总结：总结收纳40+Django日常开发常用第三方库](https://mp.weixin.qq.com/s/JFM-bMEF8TA0sHEwlWCrjA)
 [47、Django进阶：.gitignore文件建议忽略文件清单及是否需要忽略数据库迁移文件](https://mp.weixin.qq.com/s/FcBM0Nkpv0Iu00LE4YXNlQ)
 [56、Django进阶：增强Django shell超好用的第三方库Django-extensions开发使用技巧详解（附源码）](https://mp.weixin.qq.com/s/iTpoxcn4gBISu3KrOkRZ8A)

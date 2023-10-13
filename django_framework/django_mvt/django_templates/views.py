@@ -11,14 +11,16 @@ def template(request):
 
 userinfo = {"author": "SteveRocket", "blog": "公众号：CTO Plus", "age": 28}
 
+
 def template1(request):
-    
     # #根据字典数据生成动态模板
     return render(request, "index.html", {"userinfo": userinfo})
 
 
 # 导入loader方法
 from django.template import loader
+
+
 def loader_template(request):
     # 通过loader加载模板
     temp = loader.get_template("django_templates/index_loader.html")
@@ -26,9 +28,6 @@ def loader_template(request):
     html = temp.render(userinfo)
     # 用响应对象将转换的字符串内容返回给浏览器
     return HttpResponse(html)
-
-
-
 
 
 class SteveRocket:
@@ -112,3 +111,13 @@ def template2(request, index):
 
 def material_dashboard(request):
     return render(request, "django_templates/dashboard/dashboard.html")
+
+
+import datetime
+def custom_template_tags(request):
+    article = {'article': {
+        'content': '欢迎关注微信公众号：CTO Plus',
+        'pub_date': datetime.datetime.now(),
+        'pub_date_str': '2023-10-14'
+    }}
+    return render(request, 'template_tags/template_tags.html', article)

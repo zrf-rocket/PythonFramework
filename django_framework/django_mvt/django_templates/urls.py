@@ -13,5 +13,8 @@ urlpatterns = [
     path('template', views.template, name='template'),
     path('template1', views.template1, name='template1'),
     path('loader_template', views.loader_template, name='loader_template'),
-    path('index/<int:id>', views.index, name='django_template')
+    path('index/<int:id>', views.index, name='django_template'),
+
+    path('custom_template_tags', views.custom_template_tags, name='custom_template_tags')
+
 ]
