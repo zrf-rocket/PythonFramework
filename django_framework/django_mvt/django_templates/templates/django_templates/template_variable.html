@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板变量</title>
+</head>
+<body>
+<p>author:<b>SteveRocket</b></p>
+<p>WeChat:<a href="https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q">https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q</a></p>
+
+<p>{{ name }}</p>
+<p>索引查询：{{ numbers.3 }}</p>
+<p>作者：{{ information.author }}</p>
+<p>平台：{{ information.platform }}</p>
+<p>年龄：{{ information.age }}</p>
+<p>博客：{{ information.blog }}</p>
+
+<p>调用函数：{{ methods }}</p>
+<p>调用类中的方法(私有方法)：{{ class_func.say_hello }}</p>
+<p>调用类中的方法，类实例化对象：{{ class_func.say_name }}</p>
+
+</body>
+</html>

@@ -12,7 +12,12 @@ app_name = "django_template_app"
 urlpatterns = [
     path('template', views.template, name='template'),
     path('template1', views.template1, name='template1'),
+    # 模板变量
+    path('template_variable', views.template_variable, name='template_variable'),
+
     path('loader_template', views.loader_template, name='loader_template'),
+    path('inner_template_tags', views.inner_template_tags, name='inner_template_tags'),
+
     path('index/<int:id>', views.index, name='django_template'),
 
     # 自定义过滤器

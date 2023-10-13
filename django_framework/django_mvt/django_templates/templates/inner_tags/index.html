@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django内置模板标签</title>
+</head>
+<body>
+<p>author:<b>SteveRocket</b></p>
+<p>WeChat:<a href="https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q">https://mp.weixin.qq.com/s/0yqGBPbOI6QxHqK17WxU8Q</a></p>
+
+<h2>Django模板标签</h2>
+
+当前用户名：{{ user }}
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}</p>
+{% else %}
+    <p>please login</p>
+{% endif %}
+
+{% if age <= 0 %}
+    <p>No Person</p>
+{% elif age > 0 and age < 18 %}
+    <p>未成年</p>
+{% elif age >= 18 and age < 28 %}
+    <p>青年</p>
+{% else %}
+    <p>大人</p>
+{% endif %}
+
+
+
+<ul>
+    {% for number in numbers %}
+        <li>{{ number }}</li>
+    {% endfor %}
+</ul>
+
+
+<ol>
+    {% for person in persons %}
+        <li> {{ person.blog }}</li>
+    {% empty %}
+        <li>This is Empty Blog</li>
+    {% endfor %}
+</ol>
+
+<ol>
+    {% for number in numbers %}
+        {% if number == 44 %}
+            <li> This is Target Number:{{ number }}</li>
+        {% elif number %}
+            <li> {{ number }}</li>
+        {% else %}
+            <li> This is None:{{ number }}</li>
+        {% endif %}
+    {% endfor %}
+</ol>
+
+日期时间：{% now "jS F Y H:i" %}<br/>
+
+</body>
+</html>

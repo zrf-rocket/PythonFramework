@@ -68,9 +68,22 @@ def template_args(request):
     return render(request, "django_templates/template_args.html", locals())
 
 
+# 内置模板标签的使用
+def inner_template_tags(request):
+    """
+    模板的内置标签
+    :param request:
+    :return:
+    """
+
+    return render(request, 'inner_tags/index.html', {
+        'age': settings.AGE, 'blog': settings.BLOG, 'platform': settings.PLATFORM
+    })
+
+
 def index(request, id):
     """
-    模板的标签
+    模板的内置过滤器
     :param request:
     :param id:
     :return:
@@ -164,36 +177,7 @@ def custom_include_tag2(request):
     {% include_tag2 'https://mp.weixin.qq.com/s/0t63QjARFIcJUCnCZDDqQg' %}""")
     return HttpResponse(template.render(Context({'author': 'SteveRocket', 'wechat': '公众号：CTO Plus'})))
 
+
 def show_article(request):
     # return render(request, 'blog/index.html')
     return render(request, 'template_tags/custom_tags.html')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

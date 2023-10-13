@@ -140,3 +140,8 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHOR = "SteveRocket"
+AGE = "28"
+BLOG = "https://mp.weixin.qq.com/s/V5Axn-ZWi22ubh5Jiocb9g"
+PLATFORM = "公众号：CTO Plus"
