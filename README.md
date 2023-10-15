@@ -11,7 +11,7 @@
 
 ## Contact
 
-![微信公众号](./static/wechat.png)  
+![微信公众号](static/wechat.png)  
 **< 微信公众号 >**
 
 ![QQ技术交流群](./static/qq_link.png)  
